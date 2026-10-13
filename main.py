@@ -10,10 +10,12 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from . import interest, profile, reply
-from .errors import APIError
-from .llm import LLMClient, get_llm
-from .schemas import (
+import interest
+import profile
+import reply
+from errors import APIError
+from llm import LLMClient, get_llm
+from schemas import (
     InterestRequest, InterestResponse, ProfileRequest, ProfileResponse, ReplyRequest, ReplyResponse,
 )
 
